@@ -1,0 +1,8 @@
+%h1 Unfriendifier
+- if @has_baseline == true
+ %p
+  Yo, #{@user["first_name"]}!
+  %br
+   We're tracking your unfriends.
+- else
+ %a(href="http://unfriendifier.com/login" title="Login")

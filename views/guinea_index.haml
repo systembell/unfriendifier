@@ -1,0 +1,14 @@
+%h1 Guineas
+%a(href="/guineas/create") Reload Guineas
+%table.display
+ %tr
+  %th Login
+  %th ID
+  %th Delete? 
+ - @test_users.each do |guinea|
+  %tr
+   %td
+    %a(href="#{guinea["login_url"]}" target="_blank") Login
+   %td= guinea["id"]
+   %td
+    %a(href="/guineas/#{guinea["id"]}/delete") X
