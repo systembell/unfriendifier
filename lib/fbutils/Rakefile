@@ -1,9 +1,0 @@
-require 'resque/tasks'
-require File.expand_path(File.join(File.dirname(__FILE__), 'fbutils.rb'))
-
-task "resque:setup" do
-  ENV['QUEUE'] = '*'
-end
-
-desc "Alias for resque:work" 
-task "jobs:work" => "resque:work"
